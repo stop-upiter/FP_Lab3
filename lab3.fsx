@@ -1,5 +1,5 @@
 // Functional Programming: Lab 3
-// Student: ***NAME***
+// Student: Rizoeva Amina, 197
 
 // Task 1
 type FormattedText = ...
