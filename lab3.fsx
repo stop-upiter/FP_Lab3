@@ -2,7 +2,13 @@
 // Student: Rizoeva Amina, 197
 
 // Task 1
-type FormattedText = ...
+type FormattedText =
+  | Header of FormattedText   
+  | BulletItemsList of FormattedText list 
+  | Text of string
+  | Bold of Boolean
+  | Italic of Boolean  
+  | Paragraphs of FormattedText list
 
 // Task 2
 let format (x : FormattedText) = ...
