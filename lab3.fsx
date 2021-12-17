@@ -42,12 +42,12 @@ let header (label: string, headType: HeaderType) = t label ("h"+ (string headTyp
 // bullet item tags
 let bullet_items (bl: Content list)(d: int) f = 
     if bl.IsEmpty then ""
-    else t (rdc (List.map (fun item -> t (f item (d+1)) "li") bl)) "ul"
+    else t (rdc (List.map (fun item -> t (f (d+1) item) "li") bl)) "ul"
     
 // paragraph tags
 let paragraph (p: Content list)(d: int) f = 
     if p.IsEmpty then ""
-    else rdc (List.map (fun item -> t (f item (d+1))"p") p)
+    else rdc (List.map (fun item -> t (f (d+1) item)"p") p)
     
 let rec content_tagger (deep: int) (x: Content) = function
     | Header (h, ht) -> header (h, ht)
