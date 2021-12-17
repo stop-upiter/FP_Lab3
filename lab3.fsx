@@ -2,13 +2,16 @@
 // Student: Rizoeva Amina, 197
 
 // Task 1
+type HeaderType = |h1=1|h2=2|h3=3
+
+type Content =   
+    | Header of string*HeaderType   
+    | Text of string*bool*bool
+    | BulletItemsList of Content list
+    | Paragraphs of Content list
+
 type FormattedText =
-  | Header of FormattedText   
-  | BulletItemsList of FormattedText list 
-  | Text of string
-  | Bold of Boolean
-  | Italic of Boolean  
-  | Paragraphs of FormattedText list
+    | Body of Content list
 
 // Task 2
 // HTML
