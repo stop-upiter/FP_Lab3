@@ -11,6 +11,21 @@ type FormattedText =
   | Paragraphs of FormattedText list
 
 // Task 2
+// HTML
+
+// short fun: string list to string
+let rdc (l: string list) = List.fold (fun acc elem -> acc + elem) "" l 
+
+// bold tags
+let b (s: string, cond: Boolean) = 
+    if cond then "<b>" + s + "</b>"
+    else s
+
+// italic tags
+let it (s: string, cond: Boolean) = 
+    if cond then "<i>" + s + "</i>"
+    else s
+
 let format (x : FormattedText) = ...
 
 
